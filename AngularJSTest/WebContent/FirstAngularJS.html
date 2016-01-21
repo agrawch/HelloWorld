@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html data-ng-app="demoApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="./JS/angular.min.js"></script>
+<script type="text/javascript" src="./JS/FirstController.js"></script>
+</head>
+<body>
+
+<div data-ng-controller="TODOCon">
+ALL TODOS LIST:
+<ul>
+<li data-ng-repeat="todo in todos">
+TaskName:{{todo.name}} Status:{{todo.done}}
+</li>
+
+</ul>
+
+ADD NEW TODO
+
+<form data-ng-submit="addTodo()">
+<input type="text" placeholder="Enter New Todo" data-ng-model="newTask">
+<input type="submit" value="ADD">
+
+</form>
+
+</div>
+
+
+</body>
+</html>
